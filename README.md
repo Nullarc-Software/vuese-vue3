@@ -16,25 +16,25 @@
 
 # Document
 
-For detailed documentation: [vuese.org](http://vuese.org)
+For detailed documentation: [https://vuese.github.io/website/](https://vuese.github.io/website/)
 
 ## Overview
 
-[Vuese](http://vuese.org) Automatically generate documentation for your `vue` component, and provides a variety of solutions for generating component documentation to meet your different needs.
+[Vuese](https://vuese.github.io/website/) Automatically generate documentation for your `vue` component, and provides a variety of solutions for generating component documentation to meet your different needs.
 
 ## @vuese/cli
 
 [![](https://img.shields.io/npm/v/@vuese/cli.svg)](https://www.npmjs.com/package/@vuese/cli)
 [![](https://img.shields.io/npm/dm/@vuese/cli.svg)](https://www.npmjs.com/package/@vuese/cli)
 
-[@vuese/cli](http://vuese.org/cli/) is a command line tool that is very simple to use. If you want to quickly build a documentation site for your `vue` component or just want to generate `markdown` document for your `vue` component, then this tool might be a good choice. Please go to the details: [@vuese/cli](http://vuese.org/cli/)
+[@vuese/cli](https://vuese.github.io/website/cli/) is a command line tool that is very simple to use. If you want to quickly build a documentation site for your `vue` component or just want to generate `markdown` document for your `vue` component, then this tool might be a good choice. Please go to the details: [@vuese/cli](https://vuese.github.io/website/cli/)
 
 ## @vuese/parser
 
 [![](https://img.shields.io/npm/v/@vuese/parser.svg)](https://www.npmjs.com/package/@vuese/parser)
 [![](https://img.shields.io/npm/dm/@vuese/parser.svg)](https://www.npmjs.com/package/@vuese/parser)
 
-The [@vuese/parser](http://vuese.org/parser/) module is the parser for the `vue` component, [@vuese/cli](http://vuese.org/cli/) internally parsing the `vue` component via the [@vuese/parser](http://vuese.org/parser/) module and extract the information we want. You can do any more advanced things with the interface provided by the [@vuese/parser](http://vuese.org/parser/) module. For the `API` documentation, please go to [@vuese/parser](http://vuese.org/parser/)
+The [@vuese/parser](https://vuese.github.io/website/parser/) module is the parser for the `vue` component, [@vuese/cli](https://vuese.github.io/website/cli/) internally parsing the `vue` component via the [@vuese/parser](https://vuese.github.io/website/parser/) module and extract the information we want. You can do any more advanced things with the interface provided by the [@vuese/parser](https://vuese.github.io/website/parser/) module. For the `API` documentation, please go to [@vuese/parser](https://vuese.github.io/website/parser/)
 
 ### Online experience
 
@@ -47,7 +47,7 @@ Visit the following 👇 link to intuitively feel `@vuese/parser`:
 [![](https://img.shields.io/npm/v/@vuese/markdown-render.svg)](https://www.npmjs.com/package/@vuese/markdown-render)
 [![](https://img.shields.io/npm/dm/@vuese/markdown-render.svg)](https://www.npmjs.com/package/@vuese/markdown-render)
 
-[@vuese/markdown-render](http://vuese.org/markdown-render/) receives the result of the Vue file parsed by [@vuese/parser](http://vuese.org/parser/) as a parameter, generate a `markdown` string. [@vuese/markdown-render](http://vuese.org/markdown-render/) is also used for [@vuese/cli](http://vuese.org/cli/)'s document generation, in other words, you can use [@vuese/markdown-render](http://vuese.org/markdown-render/) and [@vuese/parser](http://vuese.org/parser/) alone to write your own `CLI` tool to do something interesting.
+[@vuese/markdown-render](https://vuese.github.io/website/markdown-render/) receives the result of the Vue file parsed by [@vuese/parser](https://vuese.github.io/website/parser/) as a parameter, generate a `markdown` string. [@vuese/markdown-render](https://vuese.github.io/website/markdown-render/) is also used for [@vuese/cli](https://vuese.github.io/website/cli/)'s document generation, in other words, you can use [@vuese/markdown-render](https://vuese.github.io/website/markdown-render/) and [@vuese/parser](https://vuese.github.io/website/parser/) alone to write your own `CLI` tool to do something interesting.
 
 ## @vuese/loader
 
@@ -83,7 +83,7 @@ In root directory of your Vuese project:
 1. Run `yarn run build`
 2. Run `yarn link`
 
-In project that you want to use the libaries:
+In project that you want to use the libraries:
 
 1. If `@vuese/cli` is not yet installed, add it: `yarn add @vuese/cli`
 2. Run `yarn link vuese-monorepo`
@@ -127,23 +127,25 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://hcysun.me/homepage"><img src="https://avatars2.githubusercontent.com/u/14146560?v=4" width="100px;" alt=""/><br /><sub><b>HcySunYang</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=HcySunYang" title="Code">💻</a> <a href="https://github.com/vuese/vuese/commits?author=HcySunYang" title="Tests">⚠️</a> <a href="https://github.com/vuese/vuese/commits?author=HcySunYang" title="Documentation">📖</a> <a href="#example-HcySunYang" title="Examples">💡</a></td>
-    <td align="center"><a href="https://github.com/elevatebart"><img src="https://avatars1.githubusercontent.com/u/5592465?v=4" width="100px;" alt=""/><br /><sub><b>Barthélémy Ledoux</b></sub></a><br /><a href="https://github.com/vuese/vuese/issues?q=author%3Aelevatebart" title="Bug reports">🐛</a> <a href="https://github.com/vuese/vuese/commits?author=elevatebart" title="Code">💻</a></td>
-    <td align="center"><a href="http://bernhardwittmann.com"><img src="https://avatars1.githubusercontent.com/u/17594215?v=4" width="100px;" alt=""/><br /><sub><b>Bernhard Wittmann</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=BerniWittmann" title="Code">💻</a> <a href="#ideas-BerniWittmann" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://buptsteve.github.io"><img src="https://avatars2.githubusercontent.com/u/11501493?v=4" width="100px;" alt=""/><br /><sub><b>Steve Young</b></sub></a><br /><a href="https://github.com/vuese/vuese/issues?q=author%3ABuptStEve" title="Bug reports">🐛</a> <a href="https://github.com/vuese/vuese/commits?author=BuptStEve" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/wulunyi"><img src="https://avatars3.githubusercontent.com/u/15170275?v=4" width="100px;" alt=""/><br /><sub><b>wulunyi</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=wulunyi" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Estelle00"><img src="https://avatars2.githubusercontent.com/u/5432828?v=4" width="100px;" alt=""/><br /><sub><b>Estelle00</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=Estelle00" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/roxburghm"><img src="https://avatars2.githubusercontent.com/u/8364818?v=4" width="100px;" alt=""/><br /><sub><b>Matt Roxburgh</b></sub></a><br /><a href="https://github.com/vuese/vuese/issues?q=author%3Aroxburghm" title="Bug reports">🐛</a> <a href="https://github.com/vuese/vuese/commits?author=roxburghm" title="Code">💻</a></td>
+    <td align="center"><a href="http://hcysun.me/homepage"><img src="https://avatars2.githubusercontent.com/u/14146560?v=4?s=100" width="100px;" alt=""/><br /><sub><b>HcySunYang</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=HcySunYang" title="Code">💻</a> <a href="https://github.com/vuese/vuese/commits?author=HcySunYang" title="Tests">⚠️</a> <a href="https://github.com/vuese/vuese/commits?author=HcySunYang" title="Documentation">📖</a> <a href="#example-HcySunYang" title="Examples">💡</a></td>
+    <td align="center"><a href="https://github.com/elevatebart"><img src="https://avatars1.githubusercontent.com/u/5592465?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Barthélémy Ledoux</b></sub></a><br /><a href="https://github.com/vuese/vuese/issues?q=author%3Aelevatebart" title="Bug reports">🐛</a> <a href="https://github.com/vuese/vuese/commits?author=elevatebart" title="Code">💻</a></td>
+    <td align="center"><a href="http://bernhardwittmann.com"><img src="https://avatars1.githubusercontent.com/u/17594215?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bernhard Wittmann</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=BerniWittmann" title="Code">💻</a> <a href="#ideas-BerniWittmann" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://buptsteve.github.io"><img src="https://avatars2.githubusercontent.com/u/11501493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steve Young</b></sub></a><br /><a href="https://github.com/vuese/vuese/issues?q=author%3ABuptStEve" title="Bug reports">🐛</a> <a href="https://github.com/vuese/vuese/commits?author=BuptStEve" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/wulunyi"><img src="https://avatars3.githubusercontent.com/u/15170275?v=4?s=100" width="100px;" alt=""/><br /><sub><b>wulunyi</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=wulunyi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Estelle00"><img src="https://avatars2.githubusercontent.com/u/5432828?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Estelle00</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=Estelle00" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/roxburghm"><img src="https://avatars2.githubusercontent.com/u/8364818?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Roxburgh</b></sub></a><br /><a href="https://github.com/vuese/vuese/issues?q=author%3Aroxburghm" title="Bug reports">🐛</a> <a href="https://github.com/vuese/vuese/commits?author=roxburghm" title="Code">💻</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://ghuser.io/jamesgeorge007"><img src="https://avatars2.githubusercontent.com/u/25279263?v=4" width="100px;" alt=""/><br /><sub><b>James George</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=jamesgeorge007" title="Code">💻</a> <a href="https://github.com/vuese/vuese/commits?author=jamesgeorge007" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/IWANABETHATGUY"><img src="https://avatars1.githubusercontent.com/u/17974631?v=4" width="100px;" alt=""/><br /><sub><b>IWANABETHATGUY</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=IWANABETHATGUY" title="Code">💻</a> <a href="https://github.com/vuese/vuese/commits?author=IWANABETHATGUY" title="Tests">⚠️</a> <a href="https://github.com/vuese/vuese/commits?author=IWANABETHATGUY" title="Documentation">📖</a> <a href="https://github.com/vuese/vuese/issues?q=author%3AIWANABETHATGUY" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/screetBloom"><img src="https://avatars1.githubusercontent.com/u/22092110?v=4" width="100px;" alt=""/><br /><sub><b>screetBloom</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=screetBloom" title="Code">💻</a> <a href="https://github.com/vuese/vuese/commits?author=screetBloom" title="Tests">⚠️</a> <a href="https://github.com/vuese/vuese/commits?author=screetBloom" title="Documentation">📖</a> <a href="https://github.com/vuese/vuese/issues?q=author%3AscreetBloom" title="Bug reports">🐛</a> <a href="#infra-screetBloom" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://ghuser.io/jamesgeorge007"><img src="https://avatars2.githubusercontent.com/u/25279263?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James George</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=jamesgeorge007" title="Code">💻</a> <a href="https://github.com/vuese/vuese/commits?author=jamesgeorge007" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/IWANABETHATGUY"><img src="https://avatars1.githubusercontent.com/u/17974631?v=4?s=100" width="100px;" alt=""/><br /><sub><b>IWANABETHATGUY</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=IWANABETHATGUY" title="Code">💻</a> <a href="https://github.com/vuese/vuese/commits?author=IWANABETHATGUY" title="Tests">⚠️</a> <a href="https://github.com/vuese/vuese/commits?author=IWANABETHATGUY" title="Documentation">📖</a> <a href="https://github.com/vuese/vuese/issues?q=author%3AIWANABETHATGUY" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/screetBloom"><img src="https://avatars1.githubusercontent.com/u/22092110?v=4?s=100" width="100px;" alt=""/><br /><sub><b>screetBloom</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=screetBloom" title="Code">💻</a> <a href="https://github.com/vuese/vuese/commits?author=screetBloom" title="Tests">⚠️</a> <a href="https://github.com/vuese/vuese/commits?author=screetBloom" title="Documentation">📖</a> <a href="https://github.com/vuese/vuese/issues?q=author%3AscreetBloom" title="Bug reports">🐛</a> <a href="#infra-screetBloom" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://www.migitech.it"><img src="https://avatars.githubusercontent.com/u/13649775?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michele Girini</b></sub></a><br /><a href="https://github.com/vuese/vuese/commits?author=michelegirini" title="Tests">⚠️</a> <a href="https://github.com/vuese/vuese/issues?q=author%3Amichelegirini" title="Bug reports">🐛</a> <a href="https://github.com/vuese/vuese/commits?author=michelegirini" title="Code">💻</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Author
