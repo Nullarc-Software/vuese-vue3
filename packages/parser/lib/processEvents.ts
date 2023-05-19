@@ -1,7 +1,8 @@
-import * as bt from '@babel/types'
 import { NodePath } from '@babel/traverse'
+import * as bt from '@babel/types'
+
 import { EventResult } from './index'
-import { getComments, CommentResult } from './jscomments'
+import { CommentResult, getComments } from './jscomments'
 
 /**
  *
@@ -37,7 +38,7 @@ export function processEventName(
 }
 
 export function getEmitDecorator(
-  decorators: bt.Decorator[] | null
+  decorators: bt.Decorator[] | null | undefined
 ): bt.Decorator | null {
   if (!decorators || !decorators.length) return null
   for (let i = 0; i < decorators.length; i++) {

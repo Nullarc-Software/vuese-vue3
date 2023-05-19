@@ -1,8 +1,9 @@
 import generate from '@babel/generator'
 import * as bt from '@babel/types'
-import { getComments } from './jscomments'
-import { PropType, PropsResult } from './index'
+
 import { runFunction } from './helper'
+import { PropsResult, PropType } from './index'
+import { getComments } from './jscomments'
 
 export function processPropValue(
   propValueNode: bt.Node,
@@ -44,7 +45,7 @@ export function processPropValue(
       if (bt.isSpreadElement(node)) {
         return
       }
-      const n = node.key.name
+      const n = (node.key as any).name
       if (n === 'default') {
         if (!hasFunctionTypeDef(result.type)) {
           if (bt.isObjectMethod(node)) {
