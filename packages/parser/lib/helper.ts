@@ -1,6 +1,7 @@
 import generate from '@babel/generator'
-import { NodePath, Node } from '@babel/traverse'
+import { Node, NodePath } from '@babel/traverse'
 import * as bt from '@babel/types'
+
 /**
  * If a node satisfies the following conditions, then we will use this node as a Vue component.
  * 1. It is a default export
@@ -48,7 +49,7 @@ export function isVueOption(
     isVueComponent(path.parentPath.parentPath, componentLevel)
   ) {
     // General component options
-    return path.node.key.name === optionsName
+    return (path.node.key as any).name === optionsName
   } else if (
     isValidObjectProperty(path.node) &&
     path.parentPath &&
@@ -60,7 +61,7 @@ export function isVueOption(
     bt.isDecorator(path.parentPath.parentPath.parentPath.node)
   ) {
     // options in ts @Component({...})
-    return path.node.key.name === optionsName
+    return (path.node.key as any).name === optionsName
   }
   return false
 }
@@ -107,7 +108,7 @@ export function computesFromStore(node: any): boolean {
     fromStore = computesFromStore(node.callee)
   } else if (bt.isMemberExpression(node)) {
     if (bt.isThisExpression(node.object)) {
-      fromStore = node.property.name.toLowerCase().includes('store')
+      fromStore = (node.property as any).name.toLowerCase().includes('store')
     } else {
       fromStore = computesFromStore(node.object)
     }

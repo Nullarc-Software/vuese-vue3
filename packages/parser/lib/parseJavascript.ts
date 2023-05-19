@@ -1,26 +1,12 @@
 import traverse, { NodePath } from '@babel/traverse'
 import * as bt from '@babel/types'
-import { getComments, CommentResult, getComponentDescribe } from './jscomments'
-import {
-  PropsResult,
-  ParserOptions,
-  EventResult,
-  MethodResult,
-  ComputedResult,
-  DataResult,
-  MixInResult,
-  SlotResult,
-  WatchResult
-} from '@vuese/parser'
-import { getValueFromGenerate, isVueOption, computesFromStore } from './helper'
-import {
-  processPropValue,
-  normalizeProps,
-  getPropDecorator,
-  getArgumentFromPropDecorator
-} from './processProps'
+import { ComputedResult, DataResult, EventResult, MethodResult, MixInResult, ParserOptions, PropsResult, SlotResult, WatchResult } from '@vuese/parser'
+
+import { computesFromStore, getValueFromGenerate, isVueOption } from './helper'
+import { CommentResult, getComments, getComponentDescribe } from './jscomments'
 import { processDataValue } from './processData'
-import { processEventName, getEmitDecorator } from './processEvents'
+import { getEmitDecorator, processEventName } from './processEvents'
+import { getArgumentFromPropDecorator, getPropDecorator, normalizeProps, processPropValue } from './processProps'
 import { determineChildren } from './processRenderFunction'
 import { Seen } from './seen'
 
@@ -85,7 +71,7 @@ export function parseJavascript(
               if (propPath.parentPath === valuePath) {
                 const name = bt.isIdentifier(propPath.node.key)
                   ? propPath.node.key.name
-                  : propPath.node.key.value
+                  : (propPath.node.key as any).value
                 const propValueNode = propPath.node.value
                 const result: PropsResult = {
                   name,
@@ -132,7 +118,7 @@ export function parseJavascript(
           // Collect only computed that have @vuese annotations
           if (commentsRes.vuese) {
             const result: ComputedResult = {
-              name: node.key.name,
+              name: (node.key as any).name,
               type: commentsRes.type,
               describe: commentsRes.default,
               isFromStore: isFromStore
@@ -183,7 +169,7 @@ export function parseJavascript(
             // Collect only data that have @vuese annotations
             if (commentsRes.vuese && bt.isObjectProperty(node)) {
               const result: DataResult = {
-                name: node.key.name,
+                name: (node.key as any).name,
                 type: '',
                 describe: commentsRes.default,
                 default: ''
@@ -207,7 +193,7 @@ export function parseJavascript(
           // Collect only methods that have @vuese annotations
           if (commentsRes.vuese) {
             const result: MethodResult = {
-              name: node.key.name,
+              name: (node.key as any).name,
               describe: commentsRes.default,
               argumentsDesc: commentsRes.arg
             }
@@ -232,7 +218,7 @@ export function parseJavascript(
           // Collect only data that have @vuese annotations
           if (commentsRes.vuese) {
             const result: WatchResult = {
-              name: node.key.name,
+              name: (node.key as any).name,
               describe: commentsRes.default,
               argumentsDesc: commentsRes.arg
             }
@@ -275,7 +261,7 @@ export function parseJavascript(
               // Collect only data that have @vuese annotations for backward compability
               if (commentsRes.vuese) {
                 const result: DataResult = {
-                  name: node.key.name,
+                  name: (node.key as any).name,
                   type: '',
                   describe: commentsRes.default,
                   default: ''
@@ -324,7 +310,7 @@ export function parseJavascript(
           slotsComments = getComments(node)
         }
         const scopedSlots: SlotResult = {
-          name: node.callee.property.name,
+          name: (node.callee.property as any).name,
           describe: slotsComments.default.join(''),
           backerDesc: slotsComments.content
             ? slotsComments.content.join('')
